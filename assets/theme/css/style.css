@@ -1311,6 +1311,22 @@ a {
 
 
 
+.cid-sED839tr8z{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: transparent;
+}
+.cid-sED839tr8z .whatsapp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  height: 3rem;
+  width: 3rem;
+  color: #FFFFFF;
+}
+
 
 .button-contact {
   display: flex;
@@ -1376,6 +1392,10 @@ a {
 .dark-theme  .button-secondary{
   background-color: #393939;
   color: #8A8A8A;
+}
+.dark-theme .hire:hover{
+  background-color: #393939;
+  color:#FFFFFF;
 }
 .bg-light-primary{
   background: #0063DA;

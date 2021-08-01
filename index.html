@@ -34,15 +34,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                         <li class="nav-item">
-                            <a class="nav-link link font-p" href="#">
-                            About us</a>
+                            <a class="nav-link link font-p" onclick="move('about')">About us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link font-p" href="#">Work</a>
+                            <a class="nav-link link font-p" onclick="move('work')">Work</a>
                         </li>
                     </ul>
                     <div class="navbar-buttons">
-                        <a class="button-contact font-p" href="#">Contact us</a>
+                        <a class="button-contact font-p" onclick="chat()">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -60,13 +59,13 @@
                 <div class="col-12 col-lg-7 col-md-10 col-sm-12">
                     <div class="button">
                         <span class="button-secondary font-p"><strong>Consult with our experts for free</strong></span>
-                        <a class="button-primary font-p" href="$"><strong>Contact us</strong></a>
+                        <a class="button-primary font-p"  onclick="chat()"><strong>Contact us</strong></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="cid-sED1aet9Mk">
+    <section class="cid-sED1aet9Mk" id="about">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-7">
@@ -143,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="cid-sED1BSpppt">
+    <section class="cid-sED1BSpppt" id="work">
         <div class="container">
             <div class="row">
                 <div class="card col-12 col-lg-8">
@@ -188,16 +187,16 @@
         <div class="images-container container">
             <div class="row justify-content-center">
                 <div class="col-md-3 card">
-                    <img src="assets/images/1.png">
+                    <img src="assets/images/97e8f286ae1f34bd6a8d17d5b8d08a62.png">
                 </div>
                 <div class="col-md-3 card">
-                    <img src="assets/images/2.png">
+                    <img src="assets/images/a2a2c02d740a2bfea8b624843af2a472.png">
                 </div>
                 <div class="col-md-3 card">
-                    <img src="assets/images/3.png">
+                    <img src="assets/images/b398883948d2347f6bf461bd2604834f.png">
                 </div>
                 <div class="col-md-3 card">
-                    <img src="assets/images/4.png">
+                    <img src="assets/images/d8ca23e816ed43f85127e6a9bbef0cbd.png">
                 </div>
             </div>
         </div>
@@ -233,7 +232,7 @@
                     <div class="card-wrapper">
                         <h5 class="title font-grey"><strong>ARE YOU READY</strong></h5>
                         <h2 class="subtitle"><strong>Lets build your next digital product</strong></h2>
-                        <a class="col-5 button-primary font-p" href="#">Hire Us</a>
+                        <a class="col-5 button-primary font-p hire" href="#">Hire Us</a>
                     </div>
                 </div>
             </div>
@@ -246,7 +245,7 @@
                     <h3 class="title"><strong>Chat with us</strong></h3>
                     <div class="text font-md font-grey">
                         <strong>
-                            believevisual@gmail.com<br><a href="#" class="link font-grey">contact now</a>
+                            believevisual@gmail.com<br><a onclick="email()" class="link font-grey">contact now</a>
                         </strong>
                     </div>
                 </div>
@@ -268,13 +267,18 @@
                                 <span class="mbr-iconfont socicon-dribbble socicon"></span>
                             </a>
                         </div>
+                        <div class="soc-item">
+                            <a href="#" target="_blank">
+                                <span class="mbr-iconfont socicon-github socicon"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="map">
                     <h3 class="title"><strong>Find us</strong></h3>
                     <p class="text font-md font-grey">
                         <strong>
-                            Jl. Lorem ipsum, Lorem 12, Lorem 56196<br>Jakarta, Indonesia <a href="#" class="link font-grey">See maps</a><br></p>
+                            Jl. Lorem ipsum, Lorem 12, Lorem 56196<br>Jakarta, Indonesia <a onclick="map()" class="link font-grey">See maps</a><br></p>
                         </strong>
                 </div>
             </div>
@@ -283,10 +287,27 @@
             </div>
         </div>
     </section>
+    <section class="cid-sED839tr8z">
+        <div class="whatsapp">
+            <span class="mbr-iconfont socicon-whatsapp socicon"></span>
+        </div>
+    </section>
     <script src="assets/web/assets/jquery/jquery.min.js"></script>  
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>  
     <script src="assets/web/assets/jquery/slider.js"></script>  
     <script type="text/javascript">
+        chat = () => {
+            window.location.href = 'https://wa.me/6288232489983'
+        }
+        email = () => {
+            window.location.href = "mailto: believevisual@gmail.com"
+        }
+        map = () => {
+            window.location.href = "http://maps.google.com/maps?"
+        }
+        move = a =>{
+            document.querySelector(`#${a}`).scrollIntoView({behavior :'smooth'});
+        }
         theme = () =>{
             //const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
             const prefersDarkScheme = document.body.className
